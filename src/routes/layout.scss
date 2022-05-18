@@ -105,6 +105,23 @@ header {
                 list-style: none;
             }
         }
+
+        >.wallet {
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 300;
+            background: #000;
+            color: #d1c3fc;
+            padding: 8px 12px;
+            border: 1px solid #9bc4fc;
+            border-radius: 8px;
+
+            &:hover {
+                transition: box-shadow .25s ease,transform .25s ease;
+                box-shadow: 0 0.5em 0.5em -0.4em #000;
+                transform: translateY(-0.25em);
+            }
+        }
     }
 }
 

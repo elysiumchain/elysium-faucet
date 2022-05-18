@@ -1,6 +1,21 @@
 <script lang="ts">
     	import '../app.scss';
 		import './layout.scss';
+		import CommonUtil from "../utils/CommonUtil";
+		import { ethers } from "ethers";
+		import { onMount } from 'svelte';
+
+		let addressDisplay: string;
+
+		async function getAddress() {
+			const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+			const address = await provider.send("eth_requestAccounts", []);
+			addressDisplay = CommonUtil.shortenAddress(address[0]);
+		}
+
+		onMount(async () => {
+			getAddress();
+		})
 </script>
 
 <svelte:head>
@@ -26,6 +41,7 @@
 		<nav>
 			<ul><li></li></ul>
 		</nav>
+		<div class="wallet">{addressDisplay ? addressDisplay:"Connect Wallet"}</div>
 	</section>
 </header>
 
