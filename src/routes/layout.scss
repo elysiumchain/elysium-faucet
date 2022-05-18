@@ -1,0 +1,126 @@
+header {
+    >.site-status {
+        max-width: 1240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0 auto;
+        gap: 16px;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 8px;
+
+        >p {
+            margin: 0;
+        }
+
+        >.network-container {
+            width: auto;
+            height: 12px;
+            display: flex;
+            align-items: center;
+            padding: 0px 8px;
+
+            >.separator {
+                padding-left: 8px;
+                padding-right: 2px;
+                color: #6ad0ba;
+                font-weight: 500;
+            }
+
+            >.health {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #6ad0ba;
+                margin-right: 8px;
+                animation: pulseHealth 2s ease-out infinite;
+
+                @keyframes pulseHealth {
+                    0% {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+                    }
+                
+                    70% {
+                        transform: scale(1);
+                        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+                    }
+                
+                    100% {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                    }
+                }
+            }
+        }
+
+        >.lang {
+            cursor: pointer;
+            font-weight: 500;
+        }
+    }
+
+    >hr {
+        margin: 0;
+        border: 0;
+        width: 100%;
+        height: 0.5px;
+        background: #666;
+    }
+
+    >.site-menu {
+        max-width: 1240px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 16px auto;
+
+        >.logo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+
+            >img {
+                width: 32px;
+                height: 32px;
+                margin-right: 8px;
+            }
+
+            >span {
+                font-size: 21px;
+                font-weight: 500;
+                background: linear-gradient(to bottom, #d1c3fc, #9bc4fc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        >nav {
+            >ul {
+                list-style: none;
+            }
+        }
+    }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
