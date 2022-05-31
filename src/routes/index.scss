@@ -12,6 +12,21 @@ section {
         letter-spacing: 8px;
     }
 
+    >p {
+        font-size: 14px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-bottom: 16px;
+    }
+
+    >.success {
+        color: #9bc4fc;
+    }
+
+    >.error {
+        color: #D0312D;
+    }
+
     >input {
         width: 50%;
         padding: 12px 20px;
