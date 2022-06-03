@@ -10,7 +10,7 @@
         window.grecaptcha.ready(() => {
             grecaptcha.execute('6Ld6szAgAAAAAFX7Bzov3dnnUNtwY59AmU9L4PkL', {action: 'submit'}).then(async (token: string) => {
                 const data = await axios.post(`https://faucet.elysiumapi.com/recaptcha?token=${token}`,);
-                if (data.data.success) {
+                if (data.data.data) {
                     alert.success = true;
                 } else {
                     alert.error = true;
